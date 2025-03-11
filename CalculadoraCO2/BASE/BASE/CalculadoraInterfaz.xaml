@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BASE.CalculadoraInterfaz" BackgroundColor="Black">
+
+ <ContentPage.ToolbarItems>
+  
+       <ToolbarItem IconImageSource="home.png" x:Name="tb1"/>
+       <ToolbarItem IconImageSource="questions.png" Priority="1" Order="Primary" x:Name="tb3"/>
+    </ContentPage.ToolbarItems>
+
+
+
+
+   <ScrollView HeightRequest="80">
+    <StackLayout Orientation="Vertical" Padding="32" Spacing="10">
+ <Label Text="  Calculadora de CO2"  
+                   FontSize="35" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center"
+                   Margin="0,40,0,4" 
+                   TextColor="White"/>
+
+
+<Frame BackgroundColor="Gray" CornerRadius="20" Padding="5">
+<Entry x:Name="txtId" Placeholder="Id Organizacion" 
+                       FontSize="12"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                        PlaceholderColor="SpringGreen"
+                       Margin="10,0,10,10"
+                       HorizontalTextAlignment="Center"
+                       />
+	
+</Frame> 
+<Frame BackgroundColor="Gray" CornerRadius="20" Padding="5">
+<Entry x:Name="txtOrganizationName" Placeholder="Nombre Organizacion"
+                      FontSize="12"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                        PlaceholderColor="SpringGreen"
+                       Margin="10,0,10,10"
+                       HorizontalTextAlignment="Center"
+                       /> 
+</Frame>  
+
+<Frame BackgroundColor="Gray" CornerRadius="20" Padding="5">
+<Entry x:Name="txtEmisionType" Placeholder="Tipo de Emision"
+                       FontSize="12"
+                        FontAttributes="Bold"
+                      TextColor="White"
+                        PlaceholderColor="SpringGreen"
+                       Margin="10,0,10,10"
+                       HorizontalTextAlignment="Center"
+       /> 
+                      
+</Frame>
+
+<Frame BackgroundColor="Gray" CornerRadius="20" Padding="5">
+<Entry x:Name="txtEmisionName" Placeholder="Nombre de Emision" 
+                       FontSize="12"
+                        FontAttributes="Bold"
+                       TextColor="White"
+                        PlaceholderColor="SpringGreen"
+                       Margin="10,0,10,10"
+                       HorizontalTextAlignment="Center"
+       />
+</Frame>
+
+
+
+<Button Text="Guardar" x:Name="BtnGuardar"
+	FontSize="10"
+    FontAttributes="Bold"
+    TextColor="Black"
+    BackgroundColor="#00FF7B" 
+    CornerRadius="37" 
+    Margin="10,2,10,2"
+	HeightRequest="35"
+    
+
+	/>
+
+<Button Text="Obtener Informacion" x:Name="BtnObtenerCalculos"
+	FontSize="10"
+    FontAttributes="Bold"
+    TextColor="Black"
+    BackgroundColor="#00FF7B" 
+    CornerRadius="37" 
+    Margin="10,2,10,2"
+	HeightRequest="35"
+	/>
+
+<Button Text="Borrar" x:Name="BtnBorraInformacion"
+	FontSize="10"
+    FontAttributes="Bold"
+    TextColor="Black"
+    BackgroundColor="#00FF7B" 
+    CornerRadius="37" 
+    Margin="10,2,10,2"
+	HeightRequest="35"
+	/>
+
+
+            <Button Text="Continuar con los Calculos" x:Name="BtnContinuacionCalculo"
+	FontSize="10"
+    FontAttributes="Bold"
+    TextColor="Black"
+    BackgroundColor="#00FF7B" 
+    CornerRadius="37" 
+    Margin="10,2,10,2"
+	HeightRequest="35"
+  
+	/>
+
+
+<Label x:Name="StatusMessage" FontSize="Medium" />
+<ListView x:Name="CalculadoraList" > 
+<ListView.Header>
+
+<Label Text="                              Historial de Informacion                                                " TextColor="SpringGreen"/>
+
+</ListView.Header>
+
+
+
+      
+        <ListView.ItemTemplate>
+        <DataTemplate>
+        <ViewCell>
+        <Grid>
+
+        <Label Grid.Column="1" TextColor="White"  Text="{Binding Id}" />
+        <Label Grid.Column="2" TextColor="White" Text="{Binding OrganizationName}" />
+        <Label Grid.Column="3" TextColor="SpringGreen" Text="{Binding EmisionType}" />
+        <Label Grid.Column="4" TextColor="SpringGreen" Text="{Binding EmisionName}" />
+
+        </Grid>
+        </ViewCell>
+        </DataTemplate>
+   
+        </ListView.ItemTemplate>
+  
+        </ListView>
+
+        </StackLayout>
+</ScrollView>
+    
+</ContentPage>
+

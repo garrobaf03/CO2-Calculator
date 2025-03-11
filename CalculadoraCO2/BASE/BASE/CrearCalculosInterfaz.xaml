@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BASE.CrearCalculosInterfaz" BackgroundColor="Black">
+    <ContentPage.Content>
+
+        <ScrollView HeightRequest="80">
+            <StackLayout Padding="20">
+                <Label Text="Factor Emisor:" 
+	   
+	   FontSize="20"
+       FontAttributes="Bold"
+       TextColor="SpringGreen"
+                       
+        Margin="10,0,10,10"
+        HorizontalTextAlignment="Center"
+	   
+	   
+	   />
+                <Entry x:Name="num1Entry" Keyboard="Numeric" 
+	    TextColor="SpringGreen"
+	   
+	   />
+
+                <Label Text="Date Emisor:"
+	   
+	    FontSize="20"
+        FontAttributes="Bold"
+        TextColor="SpringGreen"
+                       
+        Margin="10,0,10,10"
+        HorizontalTextAlignment="Center"
+	   
+	   
+	   />
+                <Entry x:Name="num2Entry" Keyboard="Numeric"
+	   
+	    TextColor="SpringGreen"
+	   />
+
+                <Button Text="Calcular" Clicked="OnCalculateClicked" 
+	FontSize="15"
+    FontAttributes="Bold"
+    TextColor="Black"
+    BackgroundColor="#00FF7B" 
+    CornerRadius="37" 
+    Margin="15,5,15,5"
+	HeightRequest="40"
+	    
+	    />
+                <Button Text="Borrar operaciones anteriores" Clicked="OnDeleteOperacionesClicked" 
+                FontSize="15"
+                FontAttributes="Bold"
+                TextColor="Black"
+                BackgroundColor="#00FF7B" 
+                CornerRadius="37" 
+                Margin="15,5,15,5"
+	            HeightRequest="40"
+	    
+	                />
+
+                <Button Text="Actualizar operaciones anteriores" Clicked="OnRefreshOperacionesClicked" />
+
+
+
+
+
+                <Label Text="Fecha                       Factor Emision               Dato Actividad             Resultado" 
+	 FontSize="10"
+     FontAttributes="Bold"
+     TextColor="SpringGreen"
+                       
+     Margin="10,0,10,10"
+    
+	   
+	   />
+                <Label x:Name="resultLabel" />
+
+
+
+
+                <ListView x:Name="operacionesListView" ItemsSource="{Binding Operaciones}" HasUnevenRows="true">
+                    <ListView.Header>
+
+                        <Label  Text="                             Historial de Calculos                                                                  "                                                                          />
+
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+
+
+
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+
+
+                                    <Label Grid.Column="1" TextColor="SpringGreen" Text="{Binding Fecha, StringFormat=' [{0:yyyy-MM-dd}]'}  " />
+                                    <Label Text="       "/>
+                                    <Label Grid.Column="2" TextColor="SpringGreen" Text="{Binding Num1}  " />
+                                    <Label Text="                           "/>
+                                    <Label Text="*" />
+                                    <Label Grid.Column="3" TextColor="SpringGreen" Text="{Binding Num2}  " />
+                                    <Label Text="            "/>
+                                    <Label Text="=" />
+                                    <Label Grid.Column="4" TextColor="SpringGreen" Text="{Binding Resultado}  " />
+
+
+
+
+                                    <Label Text="*" />
+
+                                    <Label Text="=" />
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
+

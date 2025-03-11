@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BASE.LoginPage"
+             BackgroundColor="Black">
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <StackLayout Grid.Row="0"
+                     VerticalOptions="CenterAndExpand"
+                     Margin="20">
+            
+            <Label Text="Calculadora Huella de Carbono"
+                   TextColor="#FFFFFF"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,20" />
+
+            <Image Source="logo.png"
+                   HeightRequest="300"
+                   Margin="0,0,0,20" />
+
+            <Frame CornerRadius="10"
+                   Padding="-5"
+                   BackgroundColor="#181515"
+                   Margin="0,15,0,-5">
+
+                <Entry Placeholder="Usuario" 
+                       TextColor="White"
+                       PlaceholderColor="#00FF7B"
+                       Margin="10,0,10,10"
+                       Keyboard="Email"
+                       x:Name="usernametxt"/>
+            </Frame>
+
+
+            <Frame CornerRadius="10"
+                   Padding="-5"
+                   BackgroundColor="#181515"
+                   Margin="0,15,0,15">
+
+                <Entry Placeholder="Contraseña" 
+                       TextColor="White"
+                       PlaceholderColor="#00FF7B"
+                       Margin="10,0,10,10"
+                       IsPassword="True"
+                       x:Name="passwordtxt"/>
+                       
+            </Frame>
+
+            <Button Text="Iniciar sesión"
+                    TextColor="Black"
+                    BackgroundColor="#00FF7B"
+                    CornerRadius="37"
+                    Margin="0,30,0,10" 
+                    x:Name="btnIniciarSesion"/>
+
+            <Button Text="Regístrate"
+                    TextColor="#00FF7B"
+                    BackgroundColor="#181515"
+                    CornerRadius="37"
+                    x:Name="btnRegistar"/>
+        </StackLayout>
+
+    </Grid>
+
+
+</ContentPage>

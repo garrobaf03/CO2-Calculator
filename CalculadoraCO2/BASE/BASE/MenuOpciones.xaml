@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BASE.MenuOpciones"
+             BackgroundColor="Black">
+             
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label Text="Calculadora"  
+                   FontSize="35" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center"
+                   Margin="0,40,0,4" 
+                   TextColor="White"/>
+            
+            <Image  Source="CO2.png"  
+                    HeightRequest="160" 
+                    Margin="0,30,0,20" />
+            
+            
+            <Label Text="Menú de opciones" 
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   Margin="40,10,40,10" />
+            
+            <Button Text="Calcular Huella de Carbono"
+                    FontSize="17"
+                    TextColor="Black"
+                    BackgroundColor="#00FF7B" 
+                    CornerRadius="37" 
+                    Margin="40,10,40,10" 
+                    x:Name="btnCalculadoraCO2"/>
+            
+            <Button Text="Menú Principal" 
+                    FontSize="17"
+                    TextColor="Black"
+                    BackgroundColor="#00FF7B"
+                    CornerRadius="37" 
+                    Margin="40,0,40,10" 
+                    x:Name="btnMenuPrincipal"/>
+            <Grid>
+            <Button Text="Ayuda"
+                    FontSize="17" 
+                    TextColor="#00FF7B" 
+                    BackgroundColor="#181515" 
+                    CornerRadius="37" 
+                    Margin="40,0,0,10" 
+                    x:Name="btnAyuda"
+                    Grid.Column="0"/>
+            
+            <Button Text="Salir de la App" 
+                    FontSize="17" 
+                    TextColor="#00FF7B" 
+                    BackgroundColor="#181515" 
+                    CornerRadius="37" 
+                    Margin="0,0,40,10" 
+                    x:Name="btnSalirApp"
+                    Grid.Column="1"/>
+        </Grid>
+            
+            </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>
